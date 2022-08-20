@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_BACKEND_URL;
-const token = JSON.parse(localStorage.getItem("persist:users")).token;
+const token = JSON.parse(localStorage.getItem("persist:users"))?.token;
 
 console.log(token)
 
