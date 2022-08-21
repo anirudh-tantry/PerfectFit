@@ -1,7 +1,7 @@
 /* Swiper */
 :root {
-  --swiper-theme-color: var(--accent);
-  --swiper-pagination-color: var(--accent);
+  --swiper-theme-color: var(--accent) !important;
+  --swiper-pagination-color: var(--accent) !important;
   --swiper-pagination-bullet-inactive-color: var(--black);
   --swiper-pagination-bullet-inactive-opacity: 0.2;
   --swiper-navigation-size: 1.5rem !important;
@@ -25,9 +25,6 @@
   gap: 1.5rem;
 }
 
-.slider-container {
-  /* margin-bottom: 1vmax; */
-}
 
 .home-sub-container {
   display: flex;

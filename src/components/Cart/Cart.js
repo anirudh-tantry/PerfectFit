@@ -25,7 +25,7 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    if (cart.cart_message === "Unauthorized! Please log in.") {
+    if (cart.cart_message === "Please log in.") {
       dispatch(EMPTY_CART());
       dispatch(getUser());
     }

@@ -3,10 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import Rating from "@mui/material/Rating";
 import { useParams } from "react-router-dom";
 import { getProductDetails } from "../../redux/actions/productActions";
-import { ADD_TO_CART, CLEAR_CART_ERRORS } from "../../redux/reducers/cartSlice";
+import { CLEAR_CART_ERRORS } from "../../redux/reducers/cartSlice";
 import Loader from "../Loader/Loader";
 import { toast } from "react-toastify";
-import StarIcon from "@mui/icons-material/Star";
 import millify from "millify";
 import "./ProductDetails.css";
 // Swiper
@@ -48,6 +47,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (error) {
       toast.error(message);
       dispatch(CLEAR_ERRORS());

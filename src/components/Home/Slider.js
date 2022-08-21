@@ -75,7 +75,12 @@ const HomeSlider = () => {
         {slideImages.map((slideImage, key) => (
           <SwiperSlide key={key}>
             <Link to={slideImage.link} state={slideImage.state}>
-              <img src={slideImage.src} width="100%" alt={`${key}th slide`} />
+              <img
+                src={slideImage.src}
+                width="100%"
+                alt={`${key}th slide`}
+                loading="lazy"
+              />
             </Link>
           </SwiperSlide>
         ))}

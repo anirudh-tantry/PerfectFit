@@ -15,7 +15,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const { error, loading, isAuthenticated, message, token } = useSelector(
+  const { error, loading, isAuthenticated, message } = useSelector(
     (state) => state.user
   );
 
@@ -37,7 +37,6 @@ const Login = () => {
     }
 
     if (isAuthenticated) {
-      console.log(token);
       // toast.success(message);
       dispatch(CLEAR_MESSAGE());
       dispatch(getUser());
