@@ -102,6 +102,7 @@ const ProductDetails = () => {
                       className="carousel-image"
                       key={i}
                       src={item}
+                      srcSet={`https://images.weserv.nl/?url=${item}&width=300&dpr=1 1x, https://images.weserv.nl/?url=${item}&width=300&dpr=1.5 1.5x, https://images.weserv.nl/?url=${item}&width=300&dpr=1.5 2x, https://images.weserv.nl/?url=${item}&width=300&dpr=2.5 2.5x, https://images.weserv.nl/?url=${item}&width=300&dpr=2.8 2.8x`}
                       alt={`${i} Slide`}
                     />
                   </SwiperSlide>

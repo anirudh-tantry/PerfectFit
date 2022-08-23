@@ -79,6 +79,7 @@ const Cart = () => {
                     <div className="product-container">
                       <img
                         src={product.product?.displayImage}
+                        srcSet={`https://images.weserv.nl/?url=${product.product?.displayImage}&width=120&dpr=1 1x, https://images.weserv.nl/?url=${product.product?.displayImage}&width=120&dpr=1.5 1.5x, https://images.weserv.nl/?url=${product.product?.displayImage}&width=120&dpr=1.5 2x, https://images.weserv.nl/?url=${product.product?.displayImage}&width=120&dpr=2.5 2.5x, https://images.weserv.nl/?url=${product.product?.displayImage}&width=120&dpr=2.8 2.8x`}
                         alt={product.product.brand}
                       />
                       <div className="product-info">
@@ -195,7 +196,7 @@ const Cart = () => {
       </div>
       {cart.products.length <= 0 && (
         <div className="empty_cart">
-          <img src={EmptyCart} alt="empty_cart" width={300} align="center" />
+          <img src={EmptyCart} alt="empty_cart" width={120} align="center" />
         </div>
       )}
     </div>

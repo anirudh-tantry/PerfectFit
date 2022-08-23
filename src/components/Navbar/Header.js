@@ -17,7 +17,7 @@ const Header = () => {
     <header>
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="PerfectFit Logo" width="50px" height="50px" />
+          <img src={logo} alt="PerfectFit" width="50px" height="50px" />
         </Link>
       </div>
       <nav className="nav">

@@ -76,7 +76,7 @@ const HomeSlider = () => {
           <SwiperSlide key={key}>
             <Link to={slideImage.link} state={slideImage.state}>
               <img
-                src={slideImage.src}
+                src={`https://images.weserv.nl/?url=${slideImage.src}&width=900&dpr=1.5`}
                 width="100%"
                 alt={`${key}th slide`}
                 loading="lazy"

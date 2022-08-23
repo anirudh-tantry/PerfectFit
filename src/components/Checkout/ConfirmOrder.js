@@ -10,7 +10,7 @@ import { emptyCart } from "../../redux/actions/cartActions";
 const ConfirmOrder = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { shippingInfo, total, products } = useSelector((state) => state.cart);
+  const { shippingInfo, products } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
 
   const subtotal = products.reduce(
@@ -114,7 +114,8 @@ const ConfirmOrder = () => {
                 <div key={product.product.productId} className="cart-item">
                   <div className="product-container-order-page">
                     <img
-                      src={product.product.displayImage}
+                      src={`https://images.weserv.nl/?url=${product.product.displayImage}&width=120&dpr=1`}
+                      srcSet={`https://images.weserv.nl/?url=${product.product.displayImage}&width=120&dpr=1 1x, https://images.weserv.nl/?url=${product.product.displayImage}&width=120&dpr=1.5 1.5x, https://images.weserv.nl/?url=${product.product.displayImage}&width=120&dpr=1.5 2x, https://images.weserv.nl/?url=${product.product.displayImage}&width=120&dpr=2.5 2.5x, https://images.weserv.nl/?url=${product.product.displayImage}&width=120&dpr=2.8 2.8x`}
                       alt={product.product.brand}
                     />
                     <div className="product-info">

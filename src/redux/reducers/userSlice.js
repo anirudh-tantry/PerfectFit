@@ -4,7 +4,6 @@ const userSlice = createSlice({
   name: "users",
   initialState: {
     user: null,
-    token: null,
     isAuthenticated: false,
     loading: false,
     error: null,
@@ -20,7 +19,6 @@ const userSlice = createSlice({
     },
     USER_ERROR: (state, action) => {
       state.isAuthenticated = false;
-      state.token = null;
       state.loading = false;
       state.error = true;
       state.message = action.payload.message;
@@ -38,18 +36,15 @@ const userSlice = createSlice({
       state.loading = false;
       state.isAuthenticated = true;
       state.message = action.payload.message;
-      state.token = action.payload.token;
     },
     REGISTER_SUCCESS: (state, action) => {
       state.loading = false;
       state.isAuthenticated = true;
       state.message = action.payload.message;
-      state.token = action.payload.token;
     },
     LOGOUT_SUCCESS: (state, action) => {
       state.isAuthenticated = false;
       state.user = null;
-      state.token = null;
       // state.message = action.payload.message;
     },
     FORGOT_SUCCESS: (state, action) => {

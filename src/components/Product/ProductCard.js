@@ -26,7 +26,12 @@ const ProductCard = (props) => {
       onClick={() => navigate(`/${landingPageUrl}`)}
     >
       <div className="product-card-img-container">
-        <img src={displayImage} alt={name} loading="lazy" />
+        <img
+          src={`https://images.weserv.nl/?url=${displayImage}&width=210&dpr=1`}
+          srcSet={`https://images.weserv.nl/?url=${displayImage}&width=210&dpr=1 1x, https://images.weserv.nl/?url=${displayImage}&width=210&dpr=1.5 1.5x, https://images.weserv.nl/?url=${displayImage}&width=210&dpr=1.5 2x, https://images.weserv.nl/?url=${displayImage}&width=210&dpr=2.5 2.5x, https://images.weserv.nl/?url=${displayImage}&width=210&dpr=2.8 2.8x`}
+          alt={name}
+          loading="lazy"
+        />
         <div className="product-card-ratings">
           <span>{millify(rating)}</span>
           <StarIcon color="primary" sx={{ fontSize: { xs: 12, sm: 14 } }} />
