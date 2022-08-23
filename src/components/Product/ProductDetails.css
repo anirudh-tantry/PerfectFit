@@ -38,7 +38,7 @@
 
 .detailsBlock-1 > p {
   color: rgba(54, 54, 54, 0.582);
-  font: 300 0.6rem cursive;
+  font: 400 0.6rem cursive;
 }
 
 .detailsBlock-2 {
@@ -52,7 +52,7 @@
 }
 
 .detailsBlock-2-span {
-  font: 200 0.8vmax cursive;
+  font: 300 0.8vmax cursive;
   color: rgba(0, 0, 0, 0.699);
 }
 
@@ -162,14 +162,14 @@
   .detailsBlock-1 > p {
     text-align: center;
     font-family: "Lato";
-    font-size: .5rem;
+    font-size: .6rem;
   }
 
   .detailsBlock-2 {
     justify-content: center;
   }
   .detailsBlock-2 > span {
-    font-size: .6rem;
+    font-size: .7rem;
     font-family: "Lato";
   }
 
@@ -220,17 +220,5 @@
     font: 300 1.8vmax sans-serif;
   }
 
-  .submitReview {
-    font: 500 1.7vmax "Lato";
-    padding: 1.5vmax;
-    width: 20vmax;
-    margin: 3vmax 0;
-  }
-
-  .reviewCard > p {
-    font: 600 3vw "Lato";
-  }
-  .reviewCardComment {
-    font: 300 5vw cursive;
-  }
+  
 }
