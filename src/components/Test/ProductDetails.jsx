@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     transition: "transform .2s",
     cursor: "zoom-in",
     "&:hover": {
-      transform: `scale(1.1)`,
+      transform: "scale(1.1)",
     },
   },
 
