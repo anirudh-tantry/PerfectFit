@@ -18,7 +18,7 @@ export const register = (user) => async (dispatch) => {
 
   const options = { headers: { "Content-Type": "application/json" } };
   try {
-    let { data } = await axios.post(`/api/register`, user, options);
+    let { data } = await axios.post("/api/register", user, options);
     dispatch(REGISTER_SUCCESS(data));
   } catch (err) {
     dispatch(ERROR(err.response.data));
@@ -31,7 +31,7 @@ export const login = (email, password) => async (dispatch) => {
 
   const options = { headers: { "Content-Type": "application/json" } };
   try {
-    let { data } = await axios.post(`/api/login`, { email, password }, options);
+    let { data } = await axios.post("/api/login", { email, password }, options);
     dispatch(LOGIN_SUCCESS(data));
   } catch (err) {
     dispatch(ERROR(err.response.data));
@@ -44,7 +44,7 @@ export const forgotPassword = (email) => async (dispatch) => {
 
   const options = { headers: { "Content-Type": "application/json" } };
   try {
-    let { data } = await axios.post(`/api/password/reset`, { email }, options);
+    let { data } = await axios.post("/api/password/reset", { email }, options);
     dispatch(FORGOT_SUCCESS(data));
   } catch (err) {
     dispatch(ERROR(err.response.data));
@@ -72,7 +72,7 @@ export const resetPassword =
 // LOGOUT
 export const logout = () => async (dispatch) => {
   try {
-    const { data } = await axios.post(`/api/logout`);
+    const { data } = await axios.post("/api/logout");
     dispatch(LOGOUT_SUCCESS(data));
   } catch (err) {
     dispatch(ERROR(err.response.data));

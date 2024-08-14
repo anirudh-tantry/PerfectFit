@@ -23,7 +23,7 @@ export const addToCart = (product) => async (dispatch) => {
 export const getCart = () => async (dispatch) => {
   dispatch(REQUEST());
   try {
-    const { data } = await axios.get(`/api/cart`);
+    const { data } = await axios.get("/api/cart");
     dispatch(GET_CART_SUCCESS(data));
   } catch (err) {
     dispatch(ERROR(err.response.data));
@@ -35,7 +35,7 @@ export const updateCart = (id, quantity) => async (dispatch) => {
   dispatch(REQUEST());
   try {
     const { data } = await axios.put(
-      `/api/cart/update`,
+      "/api/cart/update",
       { id, quantity },
       { headers: { "Content-Type": "application/json" } }
     );
@@ -50,7 +50,7 @@ export const removeCart = (id) => async (dispatch) => {
   dispatch(REQUEST());
   try {
     const { data } = await axios.put(
-      `/api/cart/delete`,
+      "/api/cart/delete",
       { id },
       { headers: { "Content-Type": "application/json" } }
     );
@@ -65,7 +65,7 @@ export const emptyCart = (id) => async (dispatch) => {
   dispatch(REQUEST());
   try {
     const { data } = await axios.delete(
-      `/api/cart/empty`
+      "/api/cart/empty"
     );
     dispatch(GET_CART_SUCCESS(data));
   } catch (err) {
