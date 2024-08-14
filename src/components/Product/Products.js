@@ -42,8 +42,7 @@ const Products = () => {
       <h1 className="productsHeading">PRODUCTS</h1>
 
       <div className="products">
-        {products &&
-          products.map((product) => (
+        {products?.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
       </div>
