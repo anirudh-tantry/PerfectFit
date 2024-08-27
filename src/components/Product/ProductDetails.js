@@ -95,8 +95,7 @@ const ProductDetails = () => {
               // navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
             >
-              {product.Images &&
-                product.Images.map((item, i) => (
+              {product.Images?.map((item, i) => (
                   <SwiperSlide key={i} className="swiperSlide-product-images">
                     <img
                       className="carousel-image"
